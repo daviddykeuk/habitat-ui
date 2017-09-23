@@ -51,6 +51,7 @@ build
 .tmp
 
 /src/release
-/release
+/release/*
+!/release/Dockerfile
 /bower_components
 /docs
