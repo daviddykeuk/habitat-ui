@@ -1,0 +1,17 @@
+<div class="widgets">
+    <div class="row hidden-lg">
+        <div class="col-md-12 text-center">
+            <h1 style="font-size:6em">{{ clock | date:'HH:mm:ss' }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-12">
+            <div ba-panel ba-panel-title="Deptford departures" ba-panel-class="with-scroll">
+                <div include-with-scope="app/pages/home/widgets/departuresTable.html"></div>
+            </div>
+        </div>
+        <div class="col-lg-6 hidden-md hidden-sm hidden-xs text-center">
+            <h1 style="font-size:7em">{{ clock | date:'HH:mm:ss' }}</h1>
+        </div>
+    </div>
+</div>

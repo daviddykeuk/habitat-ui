@@ -1,0 +1,20 @@
+<div class="horizontal-scroll">
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Destination</th>
+                <th class="text-center">Actual time</th>
+                <th class="hidden-xs text-center">Leaves in</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in departures" ng-if="item.mins - mins > 0" ng-class="{ warning: item.status == 'LATE', danger: item.status == 'CANCELLED' }">
+                <td>{{item.aimed_departure_time}}</td>
+                <td>{{item.destination_name}}</td>
+                <td class="text-center">{{item.aimed_arrival_time === item.expected_departure_time ? 'On Time' : item.expected_departure_time}}</td>
+                <td class="hidden-xs text-center">{{ item.mins - mins - 1 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
