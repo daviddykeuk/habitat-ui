@@ -15,7 +15,11 @@
             trains.getDepartures().then(function(res) {
 
                 res.data.departures.all.forEach(function(train) {
-                    var t = train.expected_departure_time.split(":");
+                    if (train.expected_departure_time) {
+                        var t = train.expected_departure_time.split(":");
+                    } else {
+                        var t = train.aimed_departure_time.split(":");
+                    }
                     train.mins = parseInt(t[0] * 60) + parseInt(t[1]);
                 })
 
