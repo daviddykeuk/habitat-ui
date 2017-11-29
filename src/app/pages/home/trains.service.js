@@ -12,7 +12,7 @@
     function trains($http) {
 
         this.getDepartures = function() {
-            return $http.get("http://skynet:8000/trains/v1/departures");
+            return $http.get("http://stavenet.ddns.net:2241/web/v1/departures");
         }
     }
 
